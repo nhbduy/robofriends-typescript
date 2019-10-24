@@ -1,0 +1,2 @@
+(this["webpackJsonprobofriends-typescript"]=this["webpackJsonprobofriends-typescript"]||[]).push([[3],{33:function(e,t,a){"use strict";a.r(t);var r=a(0),n=a.n(r);t.default=function(e){var t=e.id,a=e.name,r=e.username,s=e.email;return n.a.createElement("div",{className:"tc bg-light-blue dib br3 pa3 ma2 grow bw2 shadow-5"},n.a.createElement("img",{src:"https://robohash.org/".concat(t,"?size=150x150"),alt:r}),n.a.createElement("div",null,n.a.createElement("h2",null,a),n.a.createElement("p",null,s)))}}}]);
+//# sourceMappingURL=3.2d8fdfa9.chunk.js.map
