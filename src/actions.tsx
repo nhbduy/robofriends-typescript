@@ -8,13 +8,13 @@ import {
 import { apiCall } from './api/api';
 
 // return object
-export const setSearchField = text => ({
+export const setSearchField: object = (text: string) => ({
   type: CHANGE_SEARCH_FIELD,
   payload: text
 });
 
 // return function
-export const setRequestRobots = () => dispatch => {
+export const setRequestRobots = () => dispatch: void => {
   dispatch({ type: REQUEST_ROBOTS_PENDING });
 
   return apiCall('https://jsonplaceholder.typicode.com/users')

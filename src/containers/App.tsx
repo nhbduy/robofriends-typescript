@@ -8,6 +8,20 @@ import MainPage from '../components/MainPage';
 
 import { setSearchField, setRequestRobots } from '../actions';
 
+export interface IRobot {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+}
+
+interface IAppProps {}
+
+interface IAppState {
+  robots: Array<IRobot>;
+  searchField: string;
+}
+
 const mapStateToProps = state => ({
   searchField: state.searchRobots.searchField,
   robots: state.requestRobots.robots,
@@ -16,12 +30,17 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onSearchChange: event => dispatch(setSearchField(event.target.value)),
+  onSearchChange: (event: React.SyntheticEvent<HTMLInputElement>): void =>
+    dispatch(setSearchField(event.currentTarget.value)),
   onRequestRobots: () => dispatch(setRequestRobots())
 });
 
-class App extends Component {
-  render() {
+class App extends Component<IAppProps, IAppState> {
+  constructor(props: IAppProps) {
+    super(props);
+  }
+
+  render(): JSX.Element {
     return <MainPage {...this.props} />;
   }
 }

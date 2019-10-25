@@ -1,8 +1,9 @@
 import React, { Suspense } from 'react';
+import { IRobot } from '../containers/App';
 
 const Card = React.lazy(() => import('./Card'));
 
-const List = ({ data }) => {
+const List = ({ data }: { robots: Array<IRobot> }) => {
   return (
     <div>
       {data.map(item => (

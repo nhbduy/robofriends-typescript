@@ -7,7 +7,7 @@ import Scroll from './Scroll';
 import ErrorBoundry from './ErrorBoundry';
 
 class MainPage extends Component {
-  componentDidMount() {
+  componentDidMount(): void {
     this.props.onRequestRobots();
   }
 
@@ -19,7 +19,7 @@ class MainPage extends Component {
     );
   };
 
-  render() {
+  render(): JSX.Element {
     const { isPending, onSearchChange } = this.props;
 
     const loadingDOM = <h1 className='tc'>Loading...</h1>;
